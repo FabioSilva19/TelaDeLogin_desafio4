@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$cor-texto-padrao: #1A202C;
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../../fontes/Merriweather-Regular.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    src: url(../../fontes/Lato-Regular.ttf);
+}
+
+@mixin input-texto {
+ 
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+}
+
+@mixin Merriweather-16{
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@mixin Merriweather-26 {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 33px;
+}
+
+@mixin Lato-16 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $cor-texto-padrao;
+    aside{
+        background-color: #F7FAFC;
+        background-image: url(../../image/image.svg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    main{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    flex-wrap: wrap;
+    h2{
+        @include Merriweather-16();
+        margin-bottom: 10px
+    }
+    h1{
+        @include Merriweather-26();
+        margin-bottom: 35px;
+    }
+
+    input{
+        width: 100%;
+    }
+}
+
+
